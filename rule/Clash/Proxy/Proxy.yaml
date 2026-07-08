@@ -1,6 +1,7 @@
 payload:
   - DOMAIN,api.waqi.info
   - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIX,api.wd-turbo.com
   - DOMAIN-SUFFIX,greasyfork.org
   - DOMAIN-SUFFIX,51cg1.com
   - DOMAIN-SUFFIX,chigua.com
