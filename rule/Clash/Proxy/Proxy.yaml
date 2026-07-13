@@ -1,6 +1,7 @@
 payload:
   - DOMAIN,api.waqi.info
   - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIX,vercel.app
   - DOMAIN-SUFFIX,typora.io
   - DOMAIN-SUFFIX,api.wd-turbo.com
   - DOMAIN-SUFFIX,greasyfork.org
