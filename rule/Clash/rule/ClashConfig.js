@@ -1,6 +1,8 @@
 function main(config) {
   // 1. 定义规则集 (rule-providers)
   const ruleProviders = {
+    "Adobe": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Adobe/Adobe.yaml", interval: 86400, path: "./ruleset/Adobe.yaml" },
+    "Apple": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Apple/Apple.yaml", interval: 86400, path: "./ruleset/Apple.yaml" },
     "Apkpure": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Apkpure/Apkpure.yaml", interval: 86400, path: "./ruleset/Apkpure.yaml" },
     "Claude": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Claude/Claude.yaml", interval: 86400, path: "./ruleset/Claude.yaml" },
     "Discord": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Discord/Discord.yaml", interval: 86400, path: "./ruleset/Discord.yaml" },

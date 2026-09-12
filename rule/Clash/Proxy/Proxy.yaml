@@ -9,3 +9,4 @@ payload:
   - DOMAIN-SUFFIX,typora.io
   - DOMAIN-SUFFIX,api.wd-turbo.com
   - DOMAIN-SUFFIX,greasyfork.org
+  - PACKAGE-NAME,com.bybit.app
