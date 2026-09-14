@@ -1,0 +1,8 @@
+payload:
+  - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIX,vercel.app
+  - DOMAIN-SUFFIX,monkrus.ws
+  - DOMAIN-SUFFIX,typora.io
+  - DOMAIN-SUFFIX,greasyfork.org
+  - DOMAIN-SUFFIX,folo.is
+  - PACKAGE-NAME,com.bybit.app

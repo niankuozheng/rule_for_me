@@ -3,7 +3,6 @@ function main(config) {
   const ruleProviders = {
     "Adobe": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Adobe/Adobe.yaml", interval: 86400, path: "./ruleset/Adobe.yaml" },
     "Apple": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Apple/Apple.yaml", interval: 86400, path: "./ruleset/Apple.yaml" },
-    "Apkpure": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Apkpure/Apkpure.yaml", interval: 86400, path: "./ruleset/Apkpure.yaml" },
     "Claude": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Claude/Claude.yaml", interval: 86400, path: "./ruleset/Claude.yaml" },
     "Discord": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Discord/Discord.yaml", interval: 86400, path: "./ruleset/Discord.yaml" },
     "Disney": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Disney/Disney.yaml", interval: 86400, path: "./ruleset/Disney.yaml" },
@@ -23,8 +22,11 @@ function main(config) {
     "Twitter": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Twitter/Twitter.yaml", interval: 86400, path: "./ruleset/Twitter.yaml" },
     "YouTube": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/YouTube/YouTube.yaml", interval: 86400, path: "./ruleset/YouTube.yaml" },
     "ProxyLite": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/ProxyLite/ProxyLite.yaml", interval: 86400, path: "./ruleset/ProxyLite.yaml" },
+    "Package": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_for_me@master/rule/Clash/Proxy/Package.yaml", interval: 86400, path: "./ruleset/Package.yaml" },
+    "Process": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_for_me@master/rule/Clash/Proxy/Process.yaml", interval: 86400, path: "./ruleset/Process.yaml" },
     "Proxy": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_for_me@master/rule/Clash/Proxy/Proxy.yaml", interval: 86400, path: "./ruleset/Proxy.yaml" },
     "Sex": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_for_me@master/rule/Clash/Proxy/Sex.yaml", interval: 86400, path: "./ruleset/Sex.yaml" },
+    "Tool": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_for_me@master/rule/Clash/Proxy/Tool.yaml", interval: 86400, path: "./ruleset/Tool.yaml" },
     "Global": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Global/Global_Classical.yaml", interval: 86400, path: "./ruleset/Global.yaml" }
   };
 
@@ -64,7 +66,7 @@ function main(config) {
 
   // 4. 创建上层应用业务策略组
   const subGroupNames = ["所有-自动", ...Object.keys(regMaps)];
-  const bizGroups = ["🤖 OpenAI", "👽 Claude", "👾 Gemini", "🗄️ GitHub", "☸️ Google", "🎨 Adobe", "🎧 Spotify", "📩 Telegram", "📬 Discord", "📥 Facebook", "📰 Twitter", "👥 Reddit", "🤳 TikTok", "📷 Instagram", "📹 YouTube", "🎥 Twitch", "👯 Sex", "🎞 流媒体", "🌐 代理", "🌏 全局", "🇨️🇳️ 国内"].map(name => ({
+  const bizGroups = ["🤖 OpenAI", "👽 Claude", "👾 Gemini", "🗄️ GitHub", "☸️ Google", "🎨 Adobe", "🎧 Spotify", "📩 Telegram", "📬 Discord", "📥 Facebook", "📰 Twitter", "👥 Reddit", "🤳 TikTok", "📷 Instagram", "📹 YouTube", "🎥 Twitch", "👯 Sex", "🎞 流媒体", "💾 App", "🔧 Tool", "🌐 Proxy", "🌐 代理", "🌏 全局", "🇨️🇳️ 国内"].map(name => ({
     name: name,
     type: "select",
     proxies: ["DIRECT", ...subGroupNames, "REJECT"]
@@ -94,9 +96,11 @@ function main(config) {
     "RULE-SET,HBO,🎞 流媒体",
     "RULE-SET,Disney,🎞 流媒体",
     "RULE-SET,Netflix,🎞 流媒体",
-    "RULE-SET,Apkpure,🌐 代理",
+    "RULE-SET,Package,💾 App",
+    "RULE-SET,Process,💾 App",
+    "RULE-SET,Tool,🔧 Tool",
+    "RULE-SET,Proxy,🌐 Proxy",
     "RULE-SET,ProxyLite,🌐 代理",
-    "RULE-SET,Proxy,🌐 代理",
     "RULE-SET,Global,🌏 全局",
     "MATCH,🇨️🇳️ 国内"
   ];
