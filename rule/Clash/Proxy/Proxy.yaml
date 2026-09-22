@@ -4,3 +4,4 @@ payload:
   - DOMAIN-SUFFIX,o2online.de
   - DOMAIN-SUFFIX,vodafone.de
   - DOMAIN-SUFFIX,api.wd-turbo.com
+  - DOMAIN-SUFFIX,supabase.co
