@@ -6,6 +6,7 @@ function main(config) {
     "Claude": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Claude/Claude.yaml", interval: 86400, path: "./ruleset/Claude.yaml" },
     "Discord": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Discord/Discord.yaml", interval: 86400, path: "./ruleset/Discord.yaml" },
     "Disney": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Disney/Disney.yaml", interval: 86400, path: "./ruleset/Disney.yaml" },
+    "DouYin": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/DouYin/DouYin.yaml", interval: 86400, path: "./ruleset/DouYin.yaml" },
     "Facebook": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Facebook/Facebook.yaml", interval: 86400, path: "./ruleset/Facebook.yaml" },
     "Gemini": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/Gemini/Gemini.yaml", interval: 86400, path: "./ruleset/Gemini.yaml" },
     "GitHub": { type: "http", behavior: "classical", url: "https://cdn.jsdelivr.net/gh/niankuozheng/rule_script@master/rule/Clash/GitHub/GitHub.yaml", interval: 86400, path: "./ruleset/GitHub.yaml" },
@@ -66,7 +67,7 @@ function main(config) {
 
   // 4. 创建上层应用业务策略组
   const subGroupNames = ["所有-自动", ...Object.keys(regMaps)];
-  const bizGroups = ["🤖 OpenAI", "👽 Claude", "👾 Gemini", "🗄️ GitHub", "☸️ Google", "🎨 ByteDance", "🎧 Spotify", "📩 Telegram", "📬 Discord", "📥 Facebook", "📰 Twitter", "👥 Reddit", "🤳 TikTok", "📷 Instagram", "📹 YouTube", "🎥 Twitch", "👯 Sex", "🎞 流媒体", "💾 App", "🔧 Tool", "🌐 Proxy", "🌐 代理", "🌏 全局", "🇨️🇳️ 国内"].map(name => ({
+  const bizGroups = ["🤖 OpenAI", "👽 Claude", "👾 Gemini", "🗄️ GitHub", "☸️ Google", "🎨 ByteDance", "🎨 DouYin", "🎧 Spotify", "📩 Telegram", "📬 Discord", "📥 Facebook", "📰 Twitter", "👥 Reddit", "🤳 TikTok", "📷 Instagram", "📹 YouTube", "🎥 Twitch", "👯 Sex", "🎞 流媒体", "💾 App", "🔧 Tool", "🌐 Proxy", "🌐 代理", "🌏 全局", "🇨️🇳️ 国内"].map(name => ({
     name: name,
     type: "select",
     proxies: ["DIRECT", ...subGroupNames, "REJECT"]
@@ -82,6 +83,7 @@ function main(config) {
     "RULE-SET,GitHub,🗄️ GitHub",
     "RULE-SET,Google,☸️ Google",
     "RULE-SET,ByteDance,🎨 ByteDance",
+    "RULE-SET,DouYin,🎨 DouYin",
     "RULE-SET,Spotify,🎧 Spotify",
     "RULE-SET,Telegram,📩 Telegram",
     "RULE-SET,Discord,📬 Discord",
