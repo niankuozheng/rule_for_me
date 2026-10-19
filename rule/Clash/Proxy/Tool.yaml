@@ -9,3 +9,4 @@ payload:
   - DOMAIN-SUFFIX,kakaocdn.net
   - DOMAIN-SUFFIX,opera.com
   - DOMAIN-SUFFIX,jsdelivr.net
+  - DOMAIN-SUFFIX,duckduckgo.com
