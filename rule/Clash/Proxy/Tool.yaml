@@ -10,3 +10,4 @@ payload:
   - DOMAIN-SUFFIX,opera.com
   - DOMAIN-SUFFIX,jsdelivr.net
   - DOMAIN-SUFFIX,duckduckgo.com
+  - DOMAIN-SUFFIX,deepl.com
