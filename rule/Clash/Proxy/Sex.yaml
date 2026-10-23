@@ -1,8 +1,17 @@
 payload:
-  - DOMAIN-SUFFIX,pornhub.com
+#pornhub
+  - DOMAIN-SUFFIX,gaytube.com
   - DOMAIN-SUFFIX,phncdn.com
-  - DOMAIN-SUFFIX,trafficjunky.net
+  - DOMAIN-SUFFIX,phprcdn.com
+  - DOMAIN-SUFFIX,porngub.com
+  - DOMAIN-SUFFIX,pornhub-deutsch.net
+  - DOMAIN-SUFFIX,pornhubapparel.com
+  - DOMAIN-SUFFIX,pornhub.com
+  - DOMAIN-SUFFIX,pornhub.org
+  - DOMAIN-SUFFIX,pornhubpremium.com
+#xvideos
   - DOMAIN-SUFFIX,xvideos.com
+#吃瓜网
   - DOMAIN-SUFFIX,chigua.com
   - DOMAIN-SUFFIX,51cg1.com
   - DOMAIN-SUFFIX,chinaxmovie.com
@@ -24,6 +33,7 @@ payload:
   - DOMAIN-SUFFIX,huangguoai.com
   - DOMAIN-SUFFIX,fourhoi.com
   - DOMAIN-SUFFIX,phimvuspot.com
+#4khd
   - DOMAIN-SUFFIX,4khd.com
   - DOMAIN-SUFFIX,uuss.uk
   - DOMAIN-SUFFIX,ssuu.uk
@@ -39,4 +49,3 @@ payload:
   - DOMAIN-SUFFIX,nungvl.net
   - DOMAIN-SUFFIX,gr5k.com
   - DOMAIN-KEYWORD,missav
-  - DOMAIN-KEYWORD,uukk
