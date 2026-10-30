@@ -1,4 +1,20 @@
 payload:
+#盗版黄果
+  - DOMAIN-SUFFIX,huangguoai.com
+#黄豆短剧
+  - DOMAIN-SUFFIX,aihuangdou.com
+#吃瓜网
+  - DOMAIN-SUFFIX,chigua.com
+  - DOMAIN-SUFFIX,51cg1.com
+#91porna
+  - DOMAIN-SUFFIX,91porna.com
+#精选porn-福利姬
+  - DOMAIN-SUFFIX,jxporn.net
+#中国X站
+  - DOMAIN-SUFFIX,chinaxmovie.com
+#中文秘密资源
+  - DOMAIN-SUFFIX,cnlovehub.com
+
 #pornhub
   - DOMAIN-SUFFIX,gaytube.com
   - DOMAIN-SUFFIX,phncdn.com
@@ -9,46 +25,63 @@ payload:
   - DOMAIN-SUFFIX,pornhub.com
   - DOMAIN-SUFFIX,pornhub.org
   - DOMAIN-SUFFIX,pornhubpremium.com
-  - DOMAIN-SUFFIX,etahub.com
 #xvideos
   - DOMAIN-SUFFIX,xvideos.com
-#吃瓜网
-  - DOMAIN-SUFFIX,chigua.com
-  - DOMAIN-SUFFIX,51cg1.com
-  - DOMAIN-SUFFIX,91porna.com
-  - DOMAIN-SUFFIX,chinaxmovie.com
-  - DOMAIN-SUFFIX,cnlovehubx18.xyz
-  - DOMAIN-SUFFIX,qpsp.cc
+
+#女同情色網
   - DOMAIN-SUFFIX,pornlesbian.live
+#正妹AV
   - DOMAIN-SUFFIX,goodav17.com
-  - DOMAIN-SUFFIX,netflav.com
-  - DOMAIN-SUFFIX,831hub.com
+#AV6K
+  - DOMAIN-SUFFIX,av6ker.xyz
   - DOMAIN-SUFFIX,av6k.com
-  - DOMAIN-SUFFIX,hohoj.tv
+  - DOMAIN-SUFFIX,av6k.app
+#XOjAV（直连）
   - DOMAIN-SUFFIX,xojav.tv
+#PPP-AV（直连）
+  - DOMAIN-SUFFIX,ppp.porn
+#hohoj-AV
+  - DOMAIN-SUFFIX,hohoj.tv
+#好莱污影院-AV
   - DOMAIN-SUFFIX,boutiquefire.xyz
-  - DOMAIN-SUFFIX,camhours.com
+#javmenu
   - DOMAIN-SUFFIX,javmenu.com
+#jable-AV
   - DOMAIN-SUFFIX,jable.tv
-  - DOMAIN-SUFFIX,mm-cg.com
+#Miss-Av
   - DOMAIN-SUFFIX,missav.ws
-  - DOMAIN-SUFFIX,huangguoai.com
-  - DOMAIN-SUFFIX,fourhoi.com
+#18AV
+  - DOMAIN-SUFFIX,mm-cg.com
+#傻傻视频-AV（直连）
+  - DOMAIN-SUFFIX,u-ibm.com
+#黄色仓库-AV（广告多）
+  - DOMAIN-SUFFIX,hscangku.com
+  - DOMAIN-SUFFIX,hsck.tv
+
+
+#套图
+#PhimVu Blog
   - DOMAIN-SUFFIX,phimvuspot.com
+#nungvl
+  - DOMAIN-SUFFIX,nungvl.net
 #4khd
   - DOMAIN-SUFFIX,4khd.com
   - DOMAIN-SUFFIX,uuss.uk
   - DOMAIN-SUFFIX,ssuu.uk
-  - DOMAIN-SUFFIX,jvid.com
+#misskon
   - DOMAIN-SUFFIX,misskon.com
-  - DOMAIN-SUFFIX,lanrenbl.net
+#8色人体摄影
   - DOMAIN-SUFFIX,8se.me
-  - DOMAIN-SUFFIX,twstalker.com
-  - DOMAIN-SUFFIX,16k.club
+#捆绑
   - DOMAIN-SUFFIX,decrasu.com
-  - DOMAIN-SUFFIX,sotwe.com
-  - DOMAIN-SUFFIX,jxporn.net
+
+#色图
+#16k-图片资源库
+  - DOMAIN-SUFFIX,16k.club
+
+#论坛
+#司机社
   - DOMAIN-SUFFIX,xsijishe.net
-  - DOMAIN-SUFFIX,nungvl.net
-  - DOMAIN-SUFFIX,gr5k.com
+  - DOMAIN-SUFFIX,dlsjs.com
+
   - DOMAIN-KEYWORD,missav
