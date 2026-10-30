@@ -130,7 +130,7 @@ function main(config) {
     "nameserver-policy": {
       // 广告域名直接返回 NXDOMAIN
       "geosite:category-ads-all": [
-        "rcode:nxdomain"
+        "rcode://name_error"
       ],
 
       // 国内域名使用国内 DNS
