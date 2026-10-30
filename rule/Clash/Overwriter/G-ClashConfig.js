@@ -39,16 +39,16 @@ function main(config) {
 
   // 2. 节点过滤正则
   const regMaps = {
-	"美国-自动": /(🇺🇸|United States)/i,
-	"香港-自动": /(🇭🇰|HongKong)/i,
-	"台湾-自动": /(🇹🇼|Taiwan)/i,
-	"日本-自动": /(🇯🇵|Japan)/i,
-	"韩国-自动": /(🇰🇷|Korea)/i,
-	"新加坡-自动": /(🇸🇬|Singapore)/i,
-	"英国-自动": /(🇬🇧|United Kingdom)/i,
-	"德国-自动": /(🇩🇪|Germany)/i,
-	"新西兰-自动": /(🇳🇱|Netherlands)/i,
-	"其他-自动": /(🇮🇹|🇪🇸|🇹🇷|🇦🇺|🇦🇷|🇧🇷|🇨🇱|🇰🇷|🇮🇳|🇮🇱|🇹🇭|🇻🇳|🇲🇾|🇿🇦)/i
+    "美国-自动": /(🇺🇸|United States)/i,
+    "香港-自动": /(🇭🇰|HongKong)/i,
+    "台湾-自动": /(🇹🇼|Taiwan)/i,
+    "日本-自动": /(🇯🇵|Japan)/i,
+    "韩国-自动": /(🇰🇷|Korea)/i,
+    "新加坡-自动": /(🇸🇬|Singapore)/i,
+    "英国-自动": /(🇬🇧|United Kingdom)/i,
+    "德国-自动": /(🇩🇪|Germany)/i,
+    "新西兰-自动": /(🇳🇱|Netherlands)/i,
+    "其他-自动": /(🇮🇹|🇪🇸|🇹🇷|🇦🇺|🇦🇷|🇧🇷|🇨🇱|🇰🇷|🇮🇳|🇮🇱|🇹🇭|🇻🇳|🇲🇾|🇿🇦)/i
   };
 
   // 3. 创建地区自动选路策略组
@@ -108,27 +108,44 @@ function main(config) {
     "RULE-SET,Global,🌏 全局",
     "MATCH,🇨️🇳️ 国内"
   ];
-  
-  // 6. DNS 分流配置
+
+  // 6. DNS 分流配置（已修正 nameserver-policy 的键名格式）
   config["dns"] = {
     "enable": true,
     "enhanced-mode": "fake-ip",
     "listen": "0.0.0.0:1053",
-    "nameserver": [
-      "https://dns.alicdn.com/dns-query",
-      "https://doh.pub/dns-query"
+
+    // 引导 DNS：使用 IP，避免引导解析依赖域名
+    "default-nameserver": [
+      "223.5.5.5",
+      "119.29.29.29"
     ],
+
+    // 未命中 nameserver-policy 时使用
+    "nameserver": [
+      "https://223.5.5.5/dns-query",
+      "https://1.1.1.1/dns-query#所有-自动"
+    ],
+
     "nameserver-policy": {
-      "https://dns.google/dns-query#香港-自动": ["https://dns.google/dns-query"],
-      "https://1.1.1.1/dns-query#日本-自动": ["https://1.1.1.1/dns-query"],
-      "https://1.0.0.1/dns-query#新加坡-自动": ["https://1.0.0.1/dns-query"],
-      "https://dns.quad9.net/dns-query#美国-自动": ["https://dns.quad9.net/dns-query"],
+      // 广告域名直接返回 NXDOMAIN
+      "geosite:category-ads-all": [
+        "rcode:nxdomain"
+      ],
+
+      // 国内域名使用国内 DNS
+      "geosite:cn": [
+        "https://223.5.5.5/dns-query",
+        "https://119.29.29.29/dns-query"
+      ],
+
+      // 非中国地理位置的域名使用海外 DNS
       "geosite:geolocation-!cn": [
-        "https://dns.google/dns-query#所有-自动",
-        "https://1.1.1.1/dns-query#所有-自动"
+        "https://1.1.1.1/dns-query#所有-自动",
+        "https://8.8.8.8/dns-query#所有-自动"
       ]
     }
   };
-  
+
   return config;
 }
