@@ -39,15 +39,15 @@ function main(config) {
 
   // 2. 节点过滤正则
   const regMaps = {
-    "美国-自动": /(🇺🇸|United States)/i,
-    "香港-自动": /(🇭🇰|HongKong)/i,
-    "台湾-自动": /(🇹🇼|Taiwan)/i,
-    "日本-自动": /(🇯🇵|Japan)/i,
-    "韩国-自动": /(🇰🇷|Korea)/i,
-    "新加坡-自动": /(🇸🇬|Singapore)/i,
-    "英国-自动": /(🇬🇧|United Kingdom)/i,
-    "德国-自动": /(🇩🇪|Germany)/i,
-    "新西兰-自动": /(🇳🇱|Netherlands)/i,
+    "🇺🇸美国-自动": /(🇺🇸|United States)/i,
+    "🇭🇰香港-自动": /(🇭🇰|HongKong)/i,
+    "🇹🇼台湾-自动": /(🇹🇼|Taiwan)/i,
+    "🇯🇵日本-自动": /(🇯🇵|Japan)/i,
+    "🇰🇷韩国-自动": /(🇰🇷|Korea)/i,
+    "🇸🇬新加坡-自动": /(🇸🇬|Singapore)/i,
+    "🇬🇧英国-自动": /(🇬🇧|United Kingdom)/i,
+    "🇩🇪德国-自动": /(🇩🇪|Germany)/i,
+    "🇳🇱新西兰-自动": /(🇳🇱|Netherlands)/i,
     "其他-自动": /(🇮🇹|🇪🇸|🇹🇷|🇦🇺|🇦🇷|🇧🇷|🇨🇱|🇰🇷|🇮🇳|🇮🇱|🇹🇭|🇻🇳|🇲🇾|🇿🇦)/i
   };
 
