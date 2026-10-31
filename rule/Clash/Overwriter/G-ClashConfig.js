@@ -54,7 +54,7 @@ function main(config) {
   // 3. 创建地区自动选路策略组
   const regionGroups = [];
   regionGroups.push({
-    name: "所有-自动", type: "url-test", url: "http://www.gstatic.com/generate_204", interval: 180, tolerance: 100,
+    name: "🇺🇳所有-自动", type: "url-test", url: "http://www.gstatic.com/generate_204", interval: 180, tolerance: 100,
     proxies: allProxies
   });
 
@@ -106,7 +106,7 @@ function main(config) {
     "RULE-SET,Proxy,🌐 Proxy",
     "RULE-SET,ProxyLite,🌐 代理",
     "RULE-SET,Global,🌏 全局",
-    "MATCH,🇨️🇳️ 国内"
+    "MATCH,🇨🇳 国内"
   ];
 
   // 6. DNS 分流配置（已修正 nameserver-policy 的键名格式）
