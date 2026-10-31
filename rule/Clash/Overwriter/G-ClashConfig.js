@@ -68,7 +68,7 @@ function main(config) {
 
   // 4. 创建上层应用业务策略组
   const subGroupNames = ["🇺🇳所有-自动", ...Object.keys(regMaps)];
-  const bizGroups = ["🤖 OpenAI", "👽 Claude", "👾 Gemini", "🗄️ GitHub", "☸️ Google", "🎨 ByteDance", "🎨 DouYin", "🎧 Spotify", "📩 Telegram", "📬 Discord", "📥 Facebook", "📰 Twitter", "👥 Reddit", "🤳 TikTok", "📷 Instagram", "📹 YouTube", "🎥 Twitch", "👯 Sex", "🎞 流媒体", "💾 App", "🔧 Tool", "🌐 Proxy", "🌐 代理", "🌏 全局", "🇨️🇳️ 国内"].map(name => ({
+  const bizGroups = ["🤖 OpenAI", "👽 Claude", "👾 Gemini", "🗄️ GitHub", "☸️ Google", "🎨 ByteDance", "🎨 DouYin", "🎧 Spotify", "📩 Telegram", "📬 Discord", "📥 Facebook", "📰 Twitter", "👥 Reddit", "🤳 TikTok", "📷 Instagram", "📹 YouTube", "🎥 Twitch", "👯 Sex", "🎞 流媒体", "💾 App", "🔧 Tool", "🌐 Proxy", "🌐 代理", "🌏 全局", "🇨🇳 国内"].map(name => ({
     name: name,
     type: "select",
     proxies: ["DIRECT", ...subGroupNames, "REJECT"]
