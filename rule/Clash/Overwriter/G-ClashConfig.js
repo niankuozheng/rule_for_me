@@ -67,7 +67,7 @@ function main(config) {
   }
 
   // 4. 创建上层应用业务策略组
-  const subGroupNames = ["所有-自动", ...Object.keys(regMaps)];
+  const subGroupNames = ["🇺🇳所有-自动", ...Object.keys(regMaps)];
   const bizGroups = ["🤖 OpenAI", "👽 Claude", "👾 Gemini", "🗄️ GitHub", "☸️ Google", "🎨 ByteDance", "🎨 DouYin", "🎧 Spotify", "📩 Telegram", "📬 Discord", "📥 Facebook", "📰 Twitter", "👥 Reddit", "🤳 TikTok", "📷 Instagram", "📹 YouTube", "🎥 Twitch", "👯 Sex", "🎞 流媒体", "💾 App", "🔧 Tool", "🌐 Proxy", "🌐 代理", "🌏 全局", "🇨️🇳️ 国内"].map(name => ({
     name: name,
     type: "select",
@@ -124,7 +124,7 @@ function main(config) {
     // 未命中 nameserver-policy 时使用
     "nameserver": [
       "https://223.5.5.5/dns-query",
-      "https://1.1.1.1/dns-query#所有-自动"
+      "https://1.1.1.1/dns-query#🇸🇬新加坡-自动"
     ],
 
     "nameserver-policy": {
@@ -141,8 +141,8 @@ function main(config) {
 
       // 非中国地理位置的域名使用海外 DNS
       "geosite:geolocation-!cn": [
-        "https://1.1.1.1/dns-query#所有-自动",
-        "https://8.8.8.8/dns-query#所有-自动"
+        "https://1.1.1.1/dns-query#🇸🇬新加坡-自动",
+        "https://8.8.8.8/dns-query#🇸🇬新加坡-自动"
       ]
     }
   };
