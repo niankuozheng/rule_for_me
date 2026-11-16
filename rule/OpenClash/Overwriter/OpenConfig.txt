@@ -1,0 +1,401 @@
+[General]
+CORE_TYPE = Meta
+EN_MODE = fake-ip-mix
+DISABLE_UDP_QUIC = 1
+ROUTER_SELF_PROXY = 1
+ENABLE_REDIRECT_DNS = 1
+ENABLE_CUSTOM_DNS = 1
+APPEND_DEFAULT_DNS = 1
+APPEND_WAN_DNS = 0
+STORE_FAKEIP = 1
+CUSTOM_FAKEIP_FILTER = 1
+CUSTOM_FAKEIP_FILTER_MODE = blacklist
+FAKEIP_RANGE = 198.18.0.1/16
+ENABLE_RESPECT_RULES = 1
+CUSTOM_NAME_POLICY = 1
+IPV6_ENABLE = 0
+IPV6_DNS = 0
+CHINA_IP_ROUTE = 1
+CHINA_IP6_ROUTE = 0
+ENABLE_META_SNIFFER = 1
+ENABLE_META_SNIFFER_CUSTOM = 1
+ENABLE_META_SNIFFER_PURE_IP = 1
+RESTART = false
+
+[YAML]
+# 1. 定义规则集 (rule-providers)
+rule-providers:
+  Apple:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Apple/Apple.yaml"
+    interval: 86400
+    path: "./ruleset/Apple.yaml"
+  ByteDance:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/ByteDance/ByteDance.yaml"
+    interval: 86400
+    path: "./ruleset/ByteDance.yaml"
+  Claude:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Claude/Claude.yaml"
+    interval: 86400
+    path: "./ruleset/Claude.yaml"
+  Discord:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Discord/Discord.yaml"
+    interval: 86400
+    path: "./ruleset/Discord.yaml"
+  Disney:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Disney/Disney.yaml"
+    interval: 86400
+    path: "./ruleset/Disney.yaml"
+  DouYin:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/DouYin/DouYin.yaml"
+    interval: 86400
+    path: "./ruleset/DouYin.yaml"
+  Facebook:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Facebook/Facebook.yaml"
+    interval: 86400
+    path: "./ruleset/Facebook.yaml"
+  Gemini:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Gemini/Gemini.yaml"
+    interval: 86400
+    path: "./ruleset/Gemini.yaml"
+  GitHub:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/GitHub/GitHub.yaml"
+    interval: 86400
+    path: "./ruleset/GitHub.yaml"
+  Google:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Google/Google.yaml"
+    interval: 86400
+    path: "./ruleset/Google.yaml"
+  HBO:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/HBO/HBO.yaml"
+    interval: 86400
+    path: "./ruleset/HBO.yaml"
+  Instagram:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Instagram/Instagram.yaml"
+    interval: 86400
+    path: "./ruleset/Instagram.yaml"
+  Netflix:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Netflix/Netflix.yaml"
+    interval: 86400
+    path: "./ruleset/Netflix.yaml"
+  OpenAI:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
+    interval: 86400
+    path: "./ruleset/OpenAI.yaml"
+  Reddit:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Reddit/Reddit.yaml"
+    interval: 86400
+    path: "./ruleset/Reddit.yaml"
+  Spotify:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Spotify/Spotify.yaml"
+    interval: 86400
+    path: "./ruleset/Spotify.yaml"
+  Telegram:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Telegram/Telegram.yaml"
+    interval: 86400
+    path: "./ruleset/Telegram.yaml"
+  TikTok:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/TikTok/TikTok.yaml"
+    interval: 86400
+    path: "./ruleset/TikTok.yaml"
+  Twitch:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Twitch/Twitch.yaml"
+    interval: 86400
+    path: "./ruleset/Twitch.yaml"
+  Twitter:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Twitter/Twitter.yaml"
+    interval: 86400
+    path: "./ruleset/Twitter.yaml"
+  YouTube:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/YouTube/YouTube.yaml"
+    interval: 86400
+    path: "./ruleset/YouTube.yaml"
+  Wikimedia:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Wikimedia/Wikimedia.yaml"
+    interval: 86400
+    path: "./ruleset/Wikimedia.yaml"
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/ProxyLite/ProxyLite.yaml"
+    interval: 86400
+    path: "./ruleset/ProxyLite.yaml"
+  Package:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Package.yaml"
+    interval: 86400
+    path: "./ruleset/Package.yaml"
+  Process:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Process.yaml"
+    interval: 86400
+    path: "./ruleset/Process.yaml"
+  Proxy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Proxy.yaml"
+    interval: 86400
+    path: "./ruleset/Proxy.yaml"
+  Sex:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Sex.yaml"
+    interval: 86400
+    path: "./ruleset/Sex.yaml"
+  Tool:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Tool.yaml"
+    interval: 86400
+    path: "./ruleset/Tool.yaml"
+  Global:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Global/Global_Classical.yaml"
+    interval: 86400
+    path: "./ruleset/Global.yaml"
+
+# 2. 策略组 (proxy-groups)
+proxy-groups:
+  # 业务策略组
+  - name: "🤖 OpenAI"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "👽 Claude"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "👾 Gemini"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🗄️ GitHub"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "☸️ Google"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🎨 ByteDance"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🎨 DouYin"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🎧 Spotify"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "📩 Telegram"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "📬 Discord"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "📥 Facebook"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "📰 Twitter"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "👥 Reddit"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🤳 TikTok"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "📷 Instagram"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "📹 YouTube"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🎥 Twitch"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "👯 Sex"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🎞 流媒体"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "💾 App"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🔧 Tool"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🌐 Proxy"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🌐 代理"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🌏 全局"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+  - name: "🇨🇳 国内"
+    type: select
+    proxies: ["DIRECT", "🇺🇳所有-自动", "🇺🇸美国-自动", "🇭🇰香港-自动", "🇹🇼台湾-自动", "🇯🇵日本-自动", "🇰🇷韩国-自动", "🇸🇬新加坡-自动", "🇬🇧英国-自动", "🇩🇪德国-自动", "🇳🇱荷兰-自动", "其他-自动", "REJECT"]
+
+  # 地区自动选路策略组 (Url-Test)
+  - name: "🇺🇳所有-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 180
+    tolerance: 100
+    use: [] # 若从订阅导入节点会自动填充，若动态提取可交由 OpenClash 自动托管
+  - name: "🇺🇸美国-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 180
+    tolerance: 100
+    filter: "(🇺🇸|United States)"
+  - name: "🇭🇰香港-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 180
+    tolerance: 100
+    filter: "(🇭🇰|HongKong)"
+  - name: "🇹🇼台湾-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 180
+    tolerance: 100
+    filter: "(🇹🇼|Taiwan)"
+  - name: "🇯🇵日本-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 180
+    tolerance: 100
+    filter: "(🇯🇵|Japan)"
+  - name: "🇰🇷韩国-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 180
+    tolerance: 100
+    filter: "(🇰🇷|Korea)"
+  - name: "🇸🇬新加坡-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 180
+    tolerance: 100
+    filter: "(🇸🇬|Singapore)"
+  - name: "🇬🇧英国-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 180
+    tolerance: 100
+    filter: "(🇬🇧|United Kingdom)"
+  - name: "🇩🇪德国-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 180
+    tolerance: 100
+    filter: "(🇩🇪|Germany)"
+  - name: "🇳🇱荷兰-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 180
+    tolerance: 100
+    filter: "(🇳🇱|Netherlands)"
+  - name: "其他-自动"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 180
+    tolerance: 100
+    filter: "(🇮🇹|🇪🇸|🇹🇷|🇦🇺|🇦🇷|🇧🇷|🇨🇱|🇰🇷|🇮🇳|🇮🇱|🇹🇭|🇻🇳|🇲🇾|🇿🇦)"
+
+# 3. 路由规则 (rules)
+rules!:
+  - RULE-SET,OpenAI,🤖 OpenAI
+  - RULE-SET,Claude,👽 Claude
+  - RULE-SET,Gemini,👾 Gemini
+  - RULE-SET,GitHub,🗄️ GitHub
+  - RULE-SET,Google,☸️ Google
+  - RULE-SET,ByteDance,🎨 ByteDance
+  - RULE-SET,DouYin,🎨 DouYin
+  - RULE-SET,Spotify,🎧 Spotify
+  - RULE-SET,Telegram,📩 Telegram
+  - RULE-SET,Discord,📬 Discord
+  - RULE-SET,Facebook,📥 Facebook
+  - RULE-SET,Twitter,📰 Twitter
+  - RULE-SET,Reddit,👥 Reddit
+  - RULE-SET,TikTok,🤳 TikTok
+  - RULE-SET,Instagram,📷 Instagram
+  - RULE-SET,YouTube,📹 YouTube
+  - RULE-SET,Twitch,🎥 Twitch
+  - RULE-SET,Sex,👯 Sex
+  - RULE-SET,HBO,🎞 流媒体
+  - RULE-SET,Disney,🎞 流媒体
+  - RULE-SET,Netflix,🎞 流媒体
+  - RULE-SET,Package,💾 App
+  - RULE-SET,Process,💾 App
+  - RULE-SET,Tool,🔧 Tool
+  - RULE-SET,Wikimedia,🔧 Tool
+  - RULE-SET,Proxy,🌐 Proxy
+  - RULE-SET,ProxyLite,🌐 代理
+  - RULE-SET,Global,🌏 全局
+  - MATCH,🇨🇳 国内
+
+# 4. DNS 分流配置
+dns!:
+  enable: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:1053
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://223.5.5.5/dns-query
+    - https://1.1.1.1/dns-query#🇸🇬新加坡-自动
+  nameserver-policy:
+    "geosite:category-ads-all":
+      - rcode://name_error
+    "geosite:cn":
+      - https://223.5.5.5/dns-query
+      - https://119.29.29.29/dns-query
+    "geosite:geolocation-!cn":
+      - https://1.1.1.1/dns-query#🇸🇬新加坡-自动
+      - https://8.8.8.8/dns-query#🇸🇬新加坡-自动

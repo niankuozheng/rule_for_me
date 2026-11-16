@@ -47,7 +47,7 @@ function main(config) {
     "🇸🇬新加坡-自动": /(🇸🇬|Singapore)/i,
     "🇬🇧英国-自动": /(🇬🇧|United Kingdom)/i,
     "🇩🇪德国-自动": /(🇩🇪|Germany)/i,
-    "🇳🇱新西兰-自动": /(🇳🇱|Netherlands)/i,
+    "🇳🇱荷兰-自动": /(🇳🇱|Netherlands)/i,
     "其他-自动": /(🇮🇹|🇪🇸|🇹🇷|🇦🇺|🇦🇷|🇧🇷|🇨🇱|🇰🇷|🇮🇳|🇮🇱|🇹🇭|🇻🇳|🇲🇾|🇿🇦)/i
   };
 
