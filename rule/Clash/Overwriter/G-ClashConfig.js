@@ -130,6 +130,12 @@ function main(config) {
       "https://120.53.53.53/dns-query"
     ],
 
+    // 专门解析代理节点服务器域名
+    "proxy-server-nameserver": [
+      "https://8.8.8.8/dns-query",
+      "https://1.1.1.1/dns-query"
+    ],
+
     "nameserver-policy": {
       // 广告域名直接返回 NXDOMAIN
       "geosite:category-ads-all": [
