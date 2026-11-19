@@ -68,7 +68,7 @@ function main(config) {
 
   // 4. 创建上层应用业务策略组
   const subGroupNames = ["🇺🇳所有-自动", ...Object.keys(regMaps)];
-  const bizGroups = ["🤖 OpenAI", "👽 Claude", "👾 Gemini", "🗄️ GitHub", "☸️ Google", "🎨 ByteDance", "🎨 DouYin", "🎧 Spotify", "📩 Telegram", "📬 Discord", "📥 Facebook", "📰 Twitter", "👥 Reddit", "🤳 TikTok", "📷 Instagram", "📹 YouTube", "🎥 Twitch", "👯 Sex", "🎞 流媒体", "💾 App", "🔧 Tool", "🌐 Proxy", "🌐 代理", "🌏 全局", "🇨🇳 国内"].map(name => ({
+  const bizGroups = ["🤖OpenAI", "👽Claude", "👾Gemini", "🗄️GitHub", "☸️Google", "🎨ByteDance", "🎨DouYin", "🎧Spotify", "📩Telegram", "📬Discord", "📥Facebook", "📰Twitter", "👥Reddit", "🤳TikTok", "📷Instagram", "📹YouTube", "🎥Twitch", "👯Sex", "🎞流媒体", "💾App", "🔧Tool", "🌐Proxy", "🌐代理", "🌏全局", "🇨🇳国内"].map(name => ({
     name: name,
     type: "select",
     proxies: ["DIRECT", ...subGroupNames, "REJECT"]
@@ -78,35 +78,35 @@ function main(config) {
 
   // 5. 覆盖并生成最终路由规则
   config["rules"] = [
-    "RULE-SET,OpenAI,🤖 OpenAI",
-    "RULE-SET,Claude,👽 Claude",
-    "RULE-SET,Gemini,👾 Gemini",
-    "RULE-SET,GitHub,🗄️ GitHub",
-    "RULE-SET,Google,☸️ Google",
-    "RULE-SET,ByteDance,🎨 ByteDance",
-    "RULE-SET,DouYin,🎨 DouYin",
-    "RULE-SET,Spotify,🎧 Spotify",
-    "RULE-SET,Telegram,📩 Telegram",
-    "RULE-SET,Discord,📬 Discord",
-    "RULE-SET,Facebook,📥 Facebook",
-    "RULE-SET,Twitter,📰 Twitter",
-    "RULE-SET,Reddit,👥 Reddit",
-    "RULE-SET,TikTok,🤳 TikTok",
-    "RULE-SET,Instagram,📷 Instagram",
-    "RULE-SET,YouTube,📹 YouTube",
-    "RULE-SET,Twitch,🎥 Twitch",
-    "RULE-SET,Sex,👯 Sex",
-    "RULE-SET,HBO,🎞 流媒体",
-    "RULE-SET,Disney,🎞 流媒体",
-    "RULE-SET,Netflix,🎞 流媒体",
-    "RULE-SET,Package,💾 App",
-    "RULE-SET,Process,💾 App",
-    "RULE-SET,Tool,🔧 Tool",
-    "RULE-SET,Wikimedia,🔧 Tool",
-    "RULE-SET,Proxy,🌐 Proxy",
-    "RULE-SET,ProxyLite,🌐 代理",
-    "RULE-SET,Global,🌏 全局",
-    "MATCH,🇨🇳 国内"
+    "RULE-SET,OpenAI,🤖OpenAI",
+    "RULE-SET,Claude,👽Claude",
+    "RULE-SET,Gemini,👾Gemini",
+    "RULE-SET,GitHub,🗄️GitHub",
+    "RULE-SET,Google,☸️Google",
+    "RULE-SET,ByteDance,🎨ByteDance",
+    "RULE-SET,DouYin,🎨DouYin",
+    "RULE-SET,Spotify,🎧Spotify",
+    "RULE-SET,Telegram,📩Telegram",
+    "RULE-SET,Discord,📬Discord",
+    "RULE-SET,Facebook,📥Facebook",
+    "RULE-SET,Twitter,📰Twitter",
+    "RULE-SET,Reddit,👥Reddit",
+    "RULE-SET,TikTok,🤳TikTok",
+    "RULE-SET,Instagram,📷Instagram",
+    "RULE-SET,YouTube,📹YouTube",
+    "RULE-SET,Twitch,🎥Twitch",
+    "RULE-SET,Sex,👯Sex",
+    "RULE-SET,HBO,🎞流媒体",
+    "RULE-SET,Disney,🎞流媒体",
+    "RULE-SET,Netflix,🎞流媒体",
+    "RULE-SET,Package,💾App",
+    "RULE-SET,Process,💾App",
+    "RULE-SET,Tool,🔧Tool",
+    "RULE-SET,Wikimedia,🔧Tool",
+    "RULE-SET,Proxy,🌐Proxy",
+    "RULE-SET,ProxyLite,🌐代理",
+    "RULE-SET,Global,🌏全局",
+    "MATCH,🇨🇳国内"
   ];
 
   // 6. DNS 分流配置（已修正 nameserver-policy 的键名格式）
@@ -125,8 +125,9 @@ function main(config) {
     // 未命中 nameserver-policy 时使用
     "nameserver": [
       "https://223.5.5.5/dns-query",
-      "https://119.29.29.29/dns-query",
-      "https://180.76.76.76/dns-query"
+      "https://1.12.12.12/dns-query",
+      "https://223.6.6.6/dns-query",
+      "https://120.53.53.53/dns-query"
     ],
 
     "nameserver-policy": {
@@ -138,8 +139,9 @@ function main(config) {
       // 国内域名使用国内 DNS
       "geosite:cn": [
         "https://223.5.5.5/dns-query",
-        "https://119.29.29.29/dns-query",
-        "https://180.76.76.76/dns-query"
+        "https://1.12.12.12/dns-query",
+        "https://223.6.6.6/dns-query",
+        "https://120.53.53.53/dns-query"
       ],
 
       // 非中国地理位置的域名使用海外 DNS
