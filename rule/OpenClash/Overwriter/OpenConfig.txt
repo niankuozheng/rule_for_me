@@ -31,174 +31,203 @@ rule-providers:
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Apple/Apple.yaml"
     interval: 86400
     path: "./ruleset/Apple.yaml"
+    proxy: "🇸🇬新加坡-自动"
   ByteDance:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/ByteDance/ByteDance.yaml"
     interval: 86400
     path: "./ruleset/ByteDance.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Claude:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Claude/Claude.yaml"
     interval: 86400
     path: "./ruleset/Claude.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Discord:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Discord/Discord.yaml"
     interval: 86400
     path: "./ruleset/Discord.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Disney:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Disney/Disney.yaml"
     interval: 86400
     path: "./ruleset/Disney.yaml"
+    proxy: "🇸🇬新加坡-自动"
   DouYin:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/DouYin/DouYin.yaml"
     interval: 86400
     path: "./ruleset/DouYin.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Facebook:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Facebook/Facebook.yaml"
     interval: 86400
     path: "./ruleset/Facebook.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Gemini:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Gemini/Gemini.yaml"
     interval: 86400
     path: "./ruleset/Gemini.yaml"
+    proxy: "🇸🇬新加坡-自动"
   GitHub:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/GitHub/GitHub.yaml"
     interval: 86400
     path: "./ruleset/GitHub.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Google:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Google/Google.yaml"
     interval: 86400
     path: "./ruleset/Google.yaml"
+    proxy: "🇸🇬新加坡-自动"
   HBO:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/HBO/HBO.yaml"
     interval: 86400
     path: "./ruleset/HBO.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Instagram:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Instagram/Instagram.yaml"
     interval: 86400
     path: "./ruleset/Instagram.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Netflix:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Netflix/Netflix.yaml"
     interval: 86400
     path: "./ruleset/Netflix.yaml"
+    proxy: "🇸🇬新加坡-自动"
   OpenAI:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
     interval: 86400
     path: "./ruleset/OpenAI.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Reddit:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Reddit/Reddit.yaml"
     interval: 86400
     path: "./ruleset/Reddit.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Spotify:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Spotify/Spotify.yaml"
     interval: 86400
     path: "./ruleset/Spotify.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Telegram:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Telegram/Telegram.yaml"
     interval: 86400
     path: "./ruleset/Telegram.yaml"
+    proxy: "🇸🇬新加坡-自动"
   TikTok:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/TikTok/TikTok.yaml"
     interval: 86400
     path: "./ruleset/TikTok.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Twitch:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Twitch/Twitch.yaml"
     interval: 86400
     path: "./ruleset/Twitch.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Twitter:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Twitter/Twitter.yaml"
     interval: 86400
     path: "./ruleset/Twitter.yaml"
+    proxy: "🇸🇬新加坡-自动"
   YouTube:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/YouTube/YouTube.yaml"
     interval: 86400
     path: "./ruleset/YouTube.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Wikimedia:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Wikimedia/Wikimedia.yaml"
     interval: 86400
     path: "./ruleset/Wikimedia.yaml"
+    proxy: "🇸🇬新加坡-自动"
   ProxyLite:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/ProxyLite/ProxyLite.yaml"
     interval: 86400
     path: "./ruleset/ProxyLite.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Package:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Package.yaml"
     interval: 86400
     path: "./ruleset/Package.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Process:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Process.yaml"
     interval: 86400
     path: "./ruleset/Process.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Proxy:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Proxy.yaml"
     interval: 86400
     path: "./ruleset/Proxy.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Sex:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Sex.yaml"
     interval: 86400
     path: "./ruleset/Sex.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Tool:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Tool.yaml"
     interval: 86400
     path: "./ruleset/Tool.yaml"
+    proxy: "🇸🇬新加坡-自动"
   Global:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/niankuozheng/rule_script/master/rule/Clash/Global/Global_Classical.yaml"
     interval: 86400
     path: "./ruleset/Global.yaml"
+    proxy: "🇸🇬新加坡-自动"
 
 # 2. 策略组 (proxy-groups)
 proxy-groups:
@@ -282,69 +311,79 @@ proxy-groups:
   # 地区自动选路策略组 (Url-Test)
   - name: "🇺🇳所有-自动"
     type: url-test
-    url: "http://www.gstatic.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 100
-    use: [] # 若从订阅导入节点会自动填充，若动态提取可交由 OpenClash 自动托管
+    include-all: true # 若从订阅导入节点会自动填充，若动态提取可交由 OpenClash 自动托管
   - name: "🇺🇸美国-自动"
     type: url-test
-    url: "http://www.gstatic.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 100
+    include-all: true
     filter: "(🇺🇸|United States)"
   - name: "🇭🇰香港-自动"
     type: url-test
-    url: "http://www.gstatic.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 100
+    include-all: true
     filter: "(🇭🇰|HongKong)"
   - name: "🇹🇼台湾-自动"
     type: url-test
-    url: "http://www.gstatic.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 100
+    include-all: true
     filter: "(🇹🇼|Taiwan)"
   - name: "🇯🇵日本-自动"
     type: url-test
-    url: "http://www.gstatic.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 100
+    include-all: true
     filter: "(🇯🇵|Japan)"
   - name: "🇰🇷韩国-自动"
     type: url-test
-    url: "http://www.gstatic.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 100
+    include-all: true
     filter: "(🇰🇷|Korea)"
   - name: "🇸🇬新加坡-自动"
     type: url-test
-    url: "http://www.gstatic.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 100
+    include-all: true
     filter: "(🇸🇬|Singapore)"
   - name: "🇬🇧英国-自动"
     type: url-test
-    url: "http://www.gstatic.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 100
+    include-all: true
     filter: "(🇬🇧|United Kingdom)"
   - name: "🇩🇪德国-自动"
     type: url-test
-    url: "http://www.gstatic.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 100
+    include-all: true
     filter: "(🇩🇪|Germany)"
   - name: "🇳🇱荷兰-自动"
     type: url-test
-    url: "http://www.gstatic.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 100
+    include-all: true
     filter: "(🇳🇱|Netherlands)"
   - name: "其他-自动"
     type: url-test
-    url: "http://www.gstatic.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 100
+    include-all: true
     filter: "(🇮🇹|🇪🇸|🇹🇷|🇦🇺|🇦🇷|🇧🇷|🇨🇱|🇰🇷|🇮🇳|🇮🇱|🇹🇭|🇻🇳|🇲🇾|🇿🇦)"
 
 # 3. 路由规则 (rules)

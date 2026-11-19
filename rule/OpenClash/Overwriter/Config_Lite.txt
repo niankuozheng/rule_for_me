@@ -1,0 +1,127 @@
+[General]
+CORE_TYPE = Meta
+EN_MODE = fake-ip-mix
+DISABLE_UDP_QUIC = 1
+ROUTER_SELF_PROXY = 1
+ENABLE_REDIRECT_DNS = 1
+ENABLE_CUSTOM_DNS = 1
+APPEND_DEFAULT_DNS = 1
+APPEND_WAN_DNS = 0
+STORE_FAKEIP = 1
+CUSTOM_FAKEIP_FILTER = 1
+CUSTOM_FAKEIP_FILTER_MODE = blacklist
+FAKEIP_RANGE = 198.18.0.1/16
+ENABLE_RESPECT_RULES = 1
+CUSTOM_NAME_POLICY = 1
+IPV6_ENABLE = 0
+IPV6_DNS = 0
+CHINA_IP_ROUTE = 1
+CHINA_IP6_ROUTE = 0
+ENABLE_META_SNIFFER = 1
+ENABLE_META_SNIFFER_CUSTOM = 1
+ENABLE_META_SNIFFER_PURE_IP = 1
+RESTART = false
+# 1. 远程古典规则集（仅保留你指定的这 3 个轻量自定义集，总计约100条）
+rule-providers:
+  Proxy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Proxy.yaml"
+    interval: 86400
+    path: "./ruleset/Proxy.yaml"
+    proxy: "🚀 节点选择"
+  Sex:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Sex.yaml"
+    interval: 86400
+    path: "./ruleset/Sex.yaml"
+    proxy: "🚀 节点选择"
+  Tool:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/niankuozheng/rule_for_me/master/rule/Clash/Proxy/Tool.yaml"
+    interval: 86400
+    path: "./ruleset/Tool.yaml"
+    proxy: "🚀 节点选择"
+
+# 2. 策略组（纯手动选择 select，无任何后台测速开销）
+proxy-groups:
+  - name: "🚀 节点选择"
+    type: select
+    include-all: true
+    proxies: ["DIRECT"]
+
+  - name: "🤖 AI 专区"
+    type: select
+    proxies: ["🚀 节点选择", "DIRECT"]
+
+  - name: "💬 社交与媒体"
+    type: select
+    proxies: ["🚀 节点选择", "DIRECT"]
+
+  - name: "🛠️ 开发与工具"
+    type: select
+    proxies: ["🚀 节点选择", "DIRECT"]
+
+  - name: "🌐 自定义代理"
+    type: select
+    proxies: ["🚀 节点选择", "DIRECT"]
+
+  - name: "👯 代理备用"
+    type: select
+    proxies: ["🚀 节点选择", "DIRECT"]
+
+  - name: "🔧 实用工具"
+    type: select
+    proxies: ["🚀 节点选择", "DIRECT"]
+
+# 3. 路由规则
+rules!:
+  # --- AI 服务 ---
+  - GEOSITE,openai,🤖 AI 专区
+  - GEOSITE,anthropic,🤖 AI 专区         # 对应 Claude
+
+  # --- 开发、搜索与 Wiki ---
+  - GEOSITE,google,🛠️ 开发与工具        # 包含 Google 搜索及 Gemini
+  - GEOSITE,github,🛠️ 开发与工具
+  - GEOSITE,wikipedia,🛠️ 开发与工具     # 内置 Wiki 规则，免拉取
+
+  # --- 社交、流媒体与通讯 ---
+  - GEOSITE,telegram,💬 社交与媒体
+  - GEOSITE,youtube,💬 社交与媒体
+  - GEOSITE,twitter,💬 社交与媒体        # X (Twitter)
+  - GEOSITE,facebook,💬 社交与媒体       # 包含 Facebook
+  - GEOSITE,instagram,💬 社交与媒体      # 包含 Instagram
+  - GEOSITE,tiktok,💬 社交与媒体
+  - GEOSITE,reddit,💬 社交与媒体
+  - GEOSITE,twitch,💬 社交与媒体
+  - GEOSITE,spotify,💬 社交与媒体
+
+  # --- 用户自定义小型古典规则集 (~100条) ---
+  - RULE-SET,Proxy,🌐 自定义代理
+  - RULE-SET,Sex,👯 代理备用
+  - RULE-SET,Tool,🔧 实用工具
+
+  # --- 兜底与国内直连 ---
+  - GEOSITE,gfw,🚀 节点选择             # 其它未明确列出的越墙流量
+  - GEOSITE,cn,DIRECT
+  - GEOIP,cn,DIRECT
+  - MATCH,🚀 节点选择
+
+# 4. DNS 分流配置
+dns!:
+  enable: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:1053
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://223.5.5.5/dns-query
+    - https://1.1.1.1/dns-query
+  nameserver-policy:
+    "geosite:cn":
+      - https://223.5.5.5/dns-query
+    "geosite:geolocation-!cn":
+      - https://1.1.1.1/dns-query

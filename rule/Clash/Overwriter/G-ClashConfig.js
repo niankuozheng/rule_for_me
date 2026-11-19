@@ -118,13 +118,15 @@ function main(config) {
     // 引导 DNS：使用 IP，避免引导解析依赖域名
     "default-nameserver": [
       "223.5.5.5",
-      "119.29.29.29"
+      "119.29.29.29",
+      "180.76.76.76"
     ],
 
     // 未命中 nameserver-policy 时使用
     "nameserver": [
       "https://223.5.5.5/dns-query",
-      "https://1.1.1.1/dns-query#🇸🇬新加坡-自动"
+      "https://119.29.29.29/dns-query",
+      "https://180.76.76.76/dns-query"
     ],
 
     "nameserver-policy": {
@@ -136,13 +138,14 @@ function main(config) {
       // 国内域名使用国内 DNS
       "geosite:cn": [
         "https://223.5.5.5/dns-query",
-        "https://119.29.29.29/dns-query"
+        "https://119.29.29.29/dns-query",
+        "https://180.76.76.76/dns-query"
       ],
 
       // 非中国地理位置的域名使用海外 DNS
       "geosite:geolocation-!cn": [
-        "https://1.1.1.1/dns-query#🇸🇬新加坡-自动",
-        "https://8.8.8.8/dns-query#🇸🇬新加坡-自动"
+        "https://8.8.8.8/dns-query#🇸🇬新加坡-自动",
+        "https://1.1.1.1/dns-query#🇸🇬新加坡-自动"
       ]
     }
   };
