@@ -132,8 +132,8 @@ function main(config) {
 
     // 专门解析代理节点服务器域名
     "proxy-server-nameserver": [
-      "https://8.8.8.8/dns-query",
-      "https://1.1.1.1/dns-query"
+      "8.8.8.8",
+      "1.1.1.1"
     ],
 
     "nameserver-policy": {
