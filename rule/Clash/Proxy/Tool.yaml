@@ -32,6 +32,10 @@ payload:
   - DOMAIN-SUFFIX,wmcloud.org
   - DOMAIN-SUFFIX,wmflabs.org
   - DOMAIN-SUFFIX,wmfusercontent.org
+
+#cloud
+#hubu
+  - DOMAIN-SUFFIX,hubu.cloud
 #Dropbox
   - DOMAIN-SUFFIX,db.tt
   - DOMAIN-SUFFIX,dropbox-dns.com
