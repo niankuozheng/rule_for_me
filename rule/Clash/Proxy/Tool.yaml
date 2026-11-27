@@ -32,6 +32,9 @@ payload:
   - DOMAIN-SUFFIX,wmcloud.org
   - DOMAIN-SUFFIX,wmflabs.org
   - DOMAIN-SUFFIX,wmfusercontent.org
+#Pinterest
+  - DOMAIN-SUFFIX,pinimg.com
+  - DOMAIN-SUFFIX,pinterest.com
 
 #cloud
 #hubu
